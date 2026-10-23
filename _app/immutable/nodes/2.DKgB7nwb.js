@@ -1,0 +1,1 @@
+import{dt as e,ft as t,n}from"../chunks/DAFuVFJ7.js";import{t as r}from"../chunks/C5dp5PMV.js";import{t as i}from"../chunks/C40vbFCJ.js";function a(a,o){t(o,!0);let s=n(`/`).replace(/\/+$/,``);i(a,{get config(){return r},path:`/`,get base(){return s}}),e()}export{a as component};
