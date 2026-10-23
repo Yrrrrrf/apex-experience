@@ -1,11 +1,12 @@
+import { asset } from '$app/paths';
 import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$app/env/public';
 import type { ApexConfig, ApexText } from '../../../../sdk/core/src/apex/types.ts';
 const t = (es: string, en: string): ApexText => ({ es, en });
-const photos = (id: string) => Array.from({ length: 5 }, (_, i) => `/assets/experiences/${id}-${i + 1}.webp`);
+const photos = (id: string) => Array.from({ length: 5 }, (_, i) => asset(`/assets/experiences/${id}-${i + 1}.webp`));
 
 /** Business content lives here. The shared SDK is independent of the APEX catalog. */
 export const apexConfig: ApexConfig = {
- brand: { name: 'APEX Experience', tagline: t('Siente la adrenalina.', 'Feel the adrenaline.'), logo: '/logo.svg', background: '/assets/forest.webp' },
+ brand: { name: 'APEX Experience', tagline: t('Siente la adrenalina.', 'Feel the adrenaline.'), logo: asset('/logo.svg'), background: asset('/assets/forest.webp') },
  contact: {
   phone: '+52 722 671 0947', whatsapp: '527226710947', instagram: 'https://www.instagram.com/experience.apex/',
   address: 'Bernardo Vara Manzana 016, Pilares, 52179 San Jerónimo Chicahualco, Méx.',
@@ -13,18 +14,18 @@ export const apexConfig: ApexConfig = {
   mapEmbed: 'https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1sBernardo+Vara,+Pilares,+Metepec,+Mexico!6i17',
  },
  destinations: [
-  { id: 'cdmx', name: 'CDMX', description: t('Ciudad, cultura y aventura en sus alrededores.', 'City, culture and adventure in the surrounding region.'), image: '/assets/destinations/cdmx.webp', gallery: ['/assets/destinations/editorial/cdmx-1.webp','/assets/destinations/editorial/cdmx-2.webp'], status: 'available', experienceIds: ['la-marquesa','vuelo-en-helicoptero','lucha-libre','gastronomia'] },
-  { id: 'quintana-roo', name: 'Quintana Roo', description: t('El Caribe, un nuevo horizonte para APEX. Estamos trabajando en este destino.', 'The Caribbean, a new horizon for APEX. We are developing this destination.'), image: '/assets/destinations/quintana-roo.webp', gallery: ['/assets/destinations/editorial/quintana-roo-1.webp','/assets/destinations/editorial/quintana-roo-2.webp'], status: 'coming-soon', experienceIds: [] },
-  { id: 'hidalgo', name: 'Hidalgo', description: t('Paisajes que invitan a salir de lo cotidiano.', 'Landscapes that invite you beyond the everyday.'), image: '/assets/destinations/hidalgo.webp', gallery: ['/assets/destinations/editorial/hidalgo-1.webp','/assets/destinations/editorial/hidalgo-2.webp'], status: 'coming-soon', experienceIds: [] },
-  { id: 'jalisco', name: 'Jalisco', description: t('Tradición y energía para nuevas historias.', 'Tradition and energy for new stories.'), image: '/assets/destinations/jalisco.webp', gallery: ['/assets/destinations/editorial/jalisco-1.webp','/assets/destinations/editorial/jalisco-2.webp'], status: 'coming-soon', experienceIds: [] },
-  { id: 'baja-california', name: 'Baja California', description: t('Horizontes abiertos y una forma distinta de explorar.', 'Open horizons and a different way to explore.'), image: '/assets/destinations/baja-california.webp', gallery: ['/assets/destinations/editorial/baja-california-1.webp','/assets/destinations/editorial/baja-california-2.webp'], status: 'coming-soon', experienceIds: [] },
-  { id: 'oaxaca', name: 'Oaxaca', description: t('Cultura y paisajes que despiertan los sentidos.', 'Culture and landscapes that awaken the senses.'), image: '/assets/destinations/oaxaca.webp', gallery: ['/assets/destinations/editorial/oaxaca-1.webp','/assets/destinations/editorial/oaxaca-2.webp'], status: 'coming-soon', experienceIds: [] },
+  { id: 'cdmx', name: 'CDMX', description: t('Ciudad, cultura y aventura en sus alrededores.', 'City, culture and adventure in the surrounding region.'), image: asset('/assets/destinations/cdmx.webp'), gallery: [asset('/assets/destinations/editorial/cdmx-1.webp'),asset('/assets/destinations/editorial/cdmx-2.webp')], status: 'available', experienceIds: ['la-marquesa','vuelo-en-helicoptero','lucha-libre','gastronomia'] },
+  { id: 'quintana-roo', name: 'Quintana Roo', description: t('El Caribe, un nuevo horizonte para APEX. Estamos trabajando en este destino.', 'The Caribbean, a new horizon for APEX. We are developing this destination.'), image: asset('/assets/destinations/quintana-roo.webp'), gallery: [asset('/assets/destinations/editorial/quintana-roo-1.webp'),asset('/assets/destinations/editorial/quintana-roo-2.webp')], status: 'coming-soon', experienceIds: [] },
+  { id: 'hidalgo', name: 'Hidalgo', description: t('Paisajes que invitan a salir de lo cotidiano.', 'Landscapes that invite you beyond the everyday.'), image: asset('/assets/destinations/hidalgo.webp'), gallery: [asset('/assets/destinations/editorial/hidalgo-1.webp'),asset('/assets/destinations/editorial/hidalgo-2.webp')], status: 'coming-soon', experienceIds: [] },
+  { id: 'jalisco', name: 'Jalisco', description: t('Tradición y energía para nuevas historias.', 'Tradition and energy for new stories.'), image: asset('/assets/destinations/jalisco.webp'), gallery: [asset('/assets/destinations/editorial/jalisco-1.webp'),asset('/assets/destinations/editorial/jalisco-2.webp')], status: 'coming-soon', experienceIds: [] },
+  { id: 'baja-california', name: 'Baja California', description: t('Horizontes abiertos y una forma distinta de explorar.', 'Open horizons and a different way to explore.'), image: asset('/assets/destinations/baja-california.webp'), gallery: [asset('/assets/destinations/editorial/baja-california-1.webp'),asset('/assets/destinations/editorial/baja-california-2.webp')], status: 'coming-soon', experienceIds: [] },
+  { id: 'oaxaca', name: 'Oaxaca', description: t('Cultura y paisajes que despiertan los sentidos.', 'Culture and landscapes that awaken the senses.'), image: asset('/assets/destinations/oaxaca.webp'), gallery: [asset('/assets/destinations/editorial/oaxaca-1.webp'),asset('/assets/destinations/editorial/oaxaca-2.webp')], status: 'coming-soon', experienceIds: [] },
  ],
  experiences: [
-  { id: 'la-marquesa', destinationId: 'cdmx', title: t('La Marquesa','La Marquesa'), description: t('ATV, caballos y tirolesa en una salida privada con tu grupo.', 'ATVs, horseback riding and ziplining on a private outing with your group.'), image: '/assets/la-marquesa/portada-paisaje.jpg', gallery: photos('la-marquesa'), status: 'available', kind: 'adventure', activities: [t('ATV','ATVs'),t('Paseo a caballo','Horseback riding'),t('Tirolesa','Ziplining')], location: t('Centro Recreativo El Valle del Potrero','El Valle del Potrero Recreation Center'), meeting: t('Valle del Potrero, La Marquesa, Estado de México. Inicio y recogida: 8:30 a. m., hora de Ciudad de México. Desde Santa Fe, calcula aproximadamente 40–60 minutos según el tráfico. El punto exacto se acuerda con APEX.', 'Valle del Potrero, La Marquesa, State of Mexico. Start and pickup: 8:30 a.m., Mexico City time. Allow approximately 40–60 minutes from Santa Fe, depending on traffic. The exact meeting point is agreed with APEX.') },
-  { id: 'vuelo-en-helicoptero', destinationId: 'cdmx', title: t('Vuelo en helicóptero','Helicopter flight'), description: t('Descubre CDMX desde una nueva perspectiva con un vuelo en helicóptero. Comparte tu fecha y número de pasajeros para recibir una propuesta de APEX.', 'Discover Mexico City from a new perspective on a helicopter flight. Share your date and passenger count to receive an APEX proposal.'), image: '/assets/experiences/vuelo-en-helicoptero-1.webp', gallery: photos('vuelo-en-helicoptero'), status: 'quote', kind: 'flight', activities: [t('Historia y arquitectura','History and architecture'),t('Paisajes naturales','Natural landscapes'),t('Paseo en helicóptero','Helicopter flight')], location: t('Punto de encuentro y traslados.','Meeting point and transfers.'), meeting: t('El helipuerto, la dirección, la aeronave, la duración, la ruta y los requisitos se confirman en tu propuesta. La oficina de APEX no es el punto de salida del vuelo. Traslados se cotizan por separado salvo inclusión expresa.', 'The helipad, address, aircraft, duration, route and requirements are confirmed in your proposal. The APEX office is not the flight departure point. Transfers are quoted separately unless expressly included.') },
-  { id: 'lucha-libre', destinationId: 'cdmx', title: t('Lucha libre','Lucha libre'), description: t('La energía del ring y la cultura de la ciudad. Una experiencia que estamos preparando. Sin fechas ni reservas abiertas. Imágenes conceptuales generadas con IA.', 'The energy of the ring and the culture of the city. An experience in preparation. No dates or reservations open. AI-generated conceptual images.'), image: '/assets/experiences/lucha-libre-1.webp', gallery: photos('lucha-libre'), status: 'coming-soon', kind: 'culture', activities: [], location: t('CDMX','Mexico City'), meeting: t('Próximamente.','Coming soon.') },
-  { id: 'gastronomia', destinationId: 'cdmx', title: t('Experiencia gastronómica','Gastronomic experience'), description: t('Sabores e historias para explorar la ciudad desde su cocina. Propuesta en preparación. Sin fechas ni reservas abiertas. Imágenes conceptuales generadas con IA.', 'Flavors and stories to explore the city through its cuisine. In preparation. No dates or reservations open. AI-generated conceptual images.'), image: '/assets/experiences/gastronomia-1.webp', gallery: photos('gastronomia'), status: 'coming-soon', kind: 'food', activities: [], location: t('CDMX','Mexico City'), meeting: t('Próximamente.','Coming soon.') },
+  { id: 'la-marquesa', destinationId: 'cdmx', title: t('La Marquesa','La Marquesa'), description: t('ATV, caballos y tirolesa en una salida privada con tu grupo.', 'ATVs, horseback riding and ziplining on a private outing with your group.'), image: asset('/assets/la-marquesa/portada-paisaje.jpg'), gallery: photos('la-marquesa'), status: 'available', kind: 'adventure', activities: [t('ATV','ATVs'),t('Paseo a caballo','Horseback riding'),t('Tirolesa','Ziplining')], location: t('Centro Recreativo El Valle del Potrero','El Valle del Potrero Recreation Center'), meeting: t('Valle del Potrero, La Marquesa, Estado de México. Inicio y recogida: 8:30 a. m., hora de Ciudad de México. Desde Santa Fe, calcula aproximadamente 40–60 minutos según el tráfico. El punto exacto se acuerda con APEX.', 'Valle del Potrero, La Marquesa, State of Mexico. Start and pickup: 8:30 a.m., Mexico City time. Allow approximately 40–60 minutes from Santa Fe, depending on traffic. The exact meeting point is agreed with APEX.') },
+  { id: 'vuelo-en-helicoptero', destinationId: 'cdmx', title: t('Vuelo en helicóptero','Helicopter flight'), description: t('Descubre CDMX desde una nueva perspectiva con un vuelo en helicóptero. Comparte tu fecha y número de pasajeros para recibir una propuesta de APEX.', 'Discover Mexico City from a new perspective on a helicopter flight. Share your date and passenger count to receive an APEX proposal.'), image: asset('/assets/experiences/vuelo-en-helicoptero-1.webp'), gallery: photos('vuelo-en-helicoptero'), status: 'quote', kind: 'flight', activities: [t('Historia y arquitectura','History and architecture'),t('Paisajes naturales','Natural landscapes'),t('Paseo en helicóptero','Helicopter flight')], location: t('Punto de encuentro y traslados.','Meeting point and transfers.'), meeting: t('El helipuerto, la dirección, la aeronave, la duración, la ruta y los requisitos se confirman en tu propuesta. La oficina de APEX no es el punto de salida del vuelo. Traslados se cotizan por separado salvo inclusión expresa.', 'The helipad, address, aircraft, duration, route and requirements are confirmed in your proposal. The APEX office is not the flight departure point. Transfers are quoted separately unless expressly included.') },
+  { id: 'lucha-libre', destinationId: 'cdmx', title: t('Lucha libre','Lucha libre'), description: t('La energía del ring y la cultura de la ciudad. Una experiencia que estamos preparando. Sin fechas ni reservas abiertas. Imágenes conceptuales generadas con IA.', 'The energy of the ring and the culture of the city. An experience in preparation. No dates or reservations open. AI-generated conceptual images.'), image: asset('/assets/experiences/lucha-libre-1.webp'), gallery: photos('lucha-libre'), status: 'coming-soon', kind: 'culture', activities: [], location: t('CDMX','Mexico City'), meeting: t('Próximamente.','Coming soon.') },
+  { id: 'gastronomia', destinationId: 'cdmx', title: t('Experiencia gastronómica','Gastronomic experience'), description: t('Sabores e historias para explorar la ciudad desde su cocina. Propuesta en preparación. Sin fechas ni reservas abiertas. Imágenes conceptuales generadas con IA.', 'Flavors and stories to explore the city through its cuisine. In preparation. No dates or reservations open. AI-generated conceptual images.'), image: asset('/assets/experiences/gastronomia-1.webp'), gallery: photos('gastronomia'), status: 'coming-soon', kind: 'food', activities: [], location: t('CDMX','Mexico City'), meeting: t('Próximamente.','Coming soon.') },
  ],
  prices: { 2: 697.05, 3: 1176.98, 4: 1542.64, 5: 1908.30, 6: 2279.67 },
  copy: {
@@ -158,18 +159,18 @@ Object.assign(apexConfig.copy, {
 });
 
 Object.assign(apexConfig.brand, {
- backgroundMobile: '/assets/forest-detail-mobile.webp',
- promoImage: '/assets/bosque.jpg',
- aboutImage: '/assets/clientes-sendero.jpg',
- attributionsUrl: '/assets/ATTRIBUTIONS.md',
+ backgroundMobile: asset('/assets/forest-detail-mobile.webp'),
+ promoImage: asset('/assets/bosque.jpg'),
+ aboutImage: asset('/assets/clientes-sendero.jpg'),
+ attributionsUrl: asset('/assets/ATTRIBUTIONS.md'),
 });
 Object.assign(apexConfig.experiences.find(item => item.id === 'la-marquesa')!, {
- activityImages: ['/assets/bosque.jpg','/assets/clientes-caballos.jpg','/assets/momentos.jpg'],
- communityImages: ['/assets/clientes-caballos.jpg','/assets/paisaje.jpg','/assets/momentos.jpg'],
+ activityImages: [asset('/assets/bosque.jpg'),asset('/assets/clientes-caballos.jpg'),asset('/assets/momentos.jpg')],
+ communityImages: [asset('/assets/clientes-caballos.jpg'),asset('/assets/paisaje.jpg'),asset('/assets/momentos.jpg')],
  mapUrl: 'https://share.google/xAlQaiBA76PdSVf6B',
 });
 Object.assign(apexConfig.experiences.find(item => item.id === 'vuelo-en-helicoptero')!, {
- activityImages: ['/assets/tours/helicoptero/catedral.jpg','/assets/tours/helicoptero/cdmx-aerea.jpg','/assets/tours/helicoptero/cabina.jpg'],
+ activityImages: [asset('/assets/tours/helicoptero/catedral.jpg'),asset('/assets/tours/helicoptero/cdmx-aerea.jpg'),asset('/assets/tours/helicoptero/cabina.jpg')],
 });
 
 /** Explicit fictional account data. It never shares storage or sessions with live authentication. */
@@ -186,7 +187,7 @@ apexConfig.demo = {
  ],
 };
 apexConfig.account = {
- heroImage: '/assets/la-marquesa/portada-paisaje.jpg',
+ heroImage: asset('/assets/la-marquesa/portada-paisaje.jpg'),
  heroTitle: t('Tu próxima historia empieza aquí.', 'Your next story starts here.'),
  heroIntro: t('Un espacio para tus planes, tus salidas y los recuerdos que vienen después.', 'A place for your plans, upcoming outings and the memories that follow.'),
  profileLocation: 'Ciudad de México · Perfil ficticio / Fictional profile',

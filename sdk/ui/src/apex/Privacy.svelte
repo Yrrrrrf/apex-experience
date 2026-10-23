@@ -1,7 +1,9 @@
 <script lang="ts">
 import type { ApexConfig,ApexLocale } from '../../../core/src/apex/mod.ts';
 import { whatsappUrl } from '../../../core/src/apex/mod.ts';
+import { useResolver } from './url.ts';
 let {config,locale}:{config:ApexConfig;locale:ApexLocale}=$props();
+const resolve = useResolver();
 const ui=(es:string,en:string)=>locale==='es'?es:en;
 let sections=$derived([
 {id:'alcance',title:ui('Alcance y vigencia','Scope and applicability'),body:config.copy.privacyIntro?.[locale]??''},
@@ -15,4 +17,4 @@ let sections=$derived([
 {id:'cambios',title:ui('Cambios al aviso','Changes to this notice'),body:ui('El aviso deberá mantenerse alineado con la operación real del portal cuando cambien los datos, las finalidades o los servicios utilizados.','This notice must remain aligned with the actual operation of the portal when data, purposes or services change.')}
 ]);
 </script>
-<section class="section wrap apex-privacy"><a class="back-link" href="/">← {ui('Volver al inicio','Back to home')}</a><p class="eyebrow">APEX / {ui('PRIVACIDAD','PRIVACY')}</p><h1>{ui('Aviso de privacidad integral.','Comprehensive privacy notice.')}</h1><p class="notice">{ui('Información sobre el tratamiento de datos de este portal y las consultas preparadas mediante sus formularios.','Information about data processing on this portal and inquiries prepared through its forms.')}</p><nav class="apex-privacy-index" aria-label={ui('Índice de privacidad','Privacy contents')}><p class="eyebrow">{ui('En este aviso','In this notice')}</p><ol>{#each sections as section}<li><a href={`#${section.id}`}>{section.title}</a></li>{/each}</ol></nav>{#each sections as section,i}<section id={section.id}><h2>{i+1}. {section.title}</h2><p>{section.body}</p>{#if section.id==='derechos'}<a class="text-link" href={whatsappUrl(config,'Solicitud ARCO / Privacidad')} target="_blank" rel="noopener noreferrer">{config.contact.phone} ↗</a>{/if}</section>{/each}</section>
+<section class="section wrap apex-privacy"><a class="back-link" href={resolve('/')}>← {ui('Volver al inicio','Back to home')}</a><p class="eyebrow">APEX / {ui('PRIVACIDAD','PRIVACY')}</p><h1>{ui('Aviso de privacidad integral.','Comprehensive privacy notice.')}</h1><p class="notice">{ui('Información sobre el tratamiento de datos de este portal y las consultas preparadas mediante sus formularios.','Information about data processing on this portal and inquiries prepared through its forms.')}</p><nav class="apex-privacy-index" aria-label={ui('Índice de privacidad','Privacy contents')}><p class="eyebrow">{ui('En este aviso','In this notice')}</p><ol>{#each sections as section}<li><a href={`#${section.id}`}>{section.title}</a></li>{/each}</ol></nav>{#each sections as section,i}<section id={section.id}><h2>{i+1}. {section.title}</h2><p>{section.body}</p>{#if section.id==='derechos'}<a class="text-link" href={whatsappUrl(config,'Solicitud ARCO / Privacidad')} target="_blank" rel="noopener noreferrer">{config.contact.phone} ↗</a>{/if}</section>{/each}</section>
