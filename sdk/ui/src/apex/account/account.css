@@ -1,0 +1,357 @@
+/* Account surfaces inherit APEX typography and color tokens; these selectors are
+   isolated from the example apps and from the public experience layouts. */
+.apex-site .account-kicker { font-size: .63rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); margin: 0 0 16px; line-height: 1.6; }
+.apex-site .account-demo-chip,.apex-site .account-live-chip { display: inline-flex; align-items: center; gap: 7px; padding: 7px 11px; border: 1px solid #ff8c4659; border-radius: 100px; background: #ff741813; color: #ffbd8f; font-size: .64rem; line-height: 1.4; font-weight: 650; white-space: nowrap; }
+.apex-site .account-demo-chip > span { width: 5px; height: 5px; background: var(--orange); border-radius: 50%; }
+.apex-site .account-live-chip { border-color: #9fc1aa50; color: #b0d9b9; background: #8bcb9910; }
+.apex-site .account-entry { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding-block: 35px 95px; align-items: start; }
+.apex-site .account-entry-story { min-height: 820px; position: sticky; top: 125px; border: 1px solid #ffffff20; border-radius: 30px; overflow: hidden; background: #14221a; isolation: isolate; display: flex; flex-direction: column; justify-content: space-between; }
+.apex-site .account-entry-story-photo { position: absolute; inset: 0; z-index: -1; }
+.apex-site .account-entry-story-photo > img { width: 100%; height: 100%; object-fit: cover; opacity: .52; }
+.apex-site .account-entry-story-photo > div { position: absolute; inset: 0; background: linear-gradient(180deg,#0c1714eb 0%,#0c1714b5 43%,#0c17143b 70%,#0c1714e8 100%); }
+.apex-site .account-entry-story-content { padding: 46px 42px; }
+.apex-site .account-entry-story h1 { font-size: clamp(2.8rem,4.6vw,4.4rem); letter-spacing: -.065em; line-height: 1.06; margin-bottom: 24px; max-width: 550px; }
+.apex-site .account-entry-story-content > p:not(.account-kicker) { color: #c0c9c2; font-size: .85rem; max-width: 390px; line-height: 1.85; }
+.apex-site .account-entry-benefits { display: grid; gap: 17px; margin: 35px 0 30px; }
+.apex-site .account-entry-benefits > div { display: flex; gap: 14px; align-items: start; }
+.apex-site .account-entry-benefits span { color: #ff9d60; font-size: .6rem; line-height: 2; letter-spacing: .08em; }
+.apex-site .account-entry-benefits p { font-size: .76rem; color: #e2e7e2; margin: 0; line-height: 1.6; }
+.apex-site .account-entry-back { font-size: .75rem; color: #c1c9c2; display: inline-flex; min-height: 44px; align-items: center; gap: 8px; }
+.apex-site .account-entry-back:hover { color: var(--orange); }
+.apex-site .account-entry-photo-label { padding: 28px 42px 40px; }
+.apex-site .account-entry-photo-label > span { font-size: .58rem; letter-spacing: .2em; text-transform: uppercase; color: #ffba87; }
+.apex-site .account-entry-photo-label p { font-family: var(--font-display); font-size: 1.4rem; letter-spacing: -.04em; margin: 10px 0 0; }
+.apex-site .account-entry-panel { padding-top: 6px; }
+.apex-site .account-entry-card { border: 1px solid #ffffff20; border-top-color: #ff914d70; border-radius: 28px; padding: 38px 36px 26px; background: linear-gradient(155deg,#272d29ed,#151c17fa 80%); box-shadow: 0 24px 80px #0004; }
+.apex-site .account-entry-card-top { display: flex; align-items: start; justify-content: space-between; gap: 10px; margin-bottom: 24px; }
+.apex-site .account-entry-card-top .account-kicker { margin: 5px 0 0; }
+.apex-site .account-entry-card > h2,.apex-site .account-auth-complete h2,.apex-site .account-auth-pending h2 { font-size: clamp(2rem,3.5vw,3rem); letter-spacing: -.055em; margin-bottom: 14px; }
+.apex-site .account-auth-subtitle { color: #aeb8b0; font-size: .8rem; line-height: 1.7; margin-bottom: 24px; }
+.apex-site .account-auth-tabs { margin: 22px 0 24px; }
+.apex-site .account-mode-picker { padding: 4px; display: flex; gap: 4px; border-radius: 12px; border: 1px solid #fff1; background: #0a100d70; margin-bottom: 27px; }
+.apex-site .account-mode-picker button { flex: 1; border-radius: 8px; padding: 10px; min-height: 40px; border: 0; color: #a9b3ac; font-size: .7rem; background: none; }
+.apex-site .account-mode-picker button.active { background: #364237; color: #f7f4ef; }
+.apex-site .account-demo-intro { display: flex; align-items: start; gap: 12px; border: 1px solid #ed9b5f2b; border-radius: 14px; padding: 16px; background: linear-gradient(130deg,#ff74180d,#20251f55); margin-bottom: 14px; }
+.apex-site .account-demo-spark { color: var(--orange); font-size: 22px; line-height: 1.2; }
+.apex-site .account-demo-intro strong { font-size: .74rem; color: #f4d1b5; font-weight: 650; }
+.apex-site .account-demo-intro p { font-size: .68rem; color: #b1bbb2; line-height: 1.75; margin: 6px 0 0; }
+.apex-site .account-example-credentials { background: #0d1510a8; border: 1px solid #ffffff16; border-radius: 14px; padding: 17px 18px 0; margin-bottom: 25px; overflow: hidden; }
+.apex-site .account-example-credentials > div { display: grid; gap: 6px; margin-bottom: 14px; }
+.apex-site .account-example-credentials > div > span { font-size: .52rem; letter-spacing: .13em; color: #95a297; }
+.apex-site .account-example-credentials code { font-family: var(--font-body); color: #e3e8e1; font-size: .76rem; overflow-wrap: anywhere; }
+.apex-site .account-example-credentials > button { min-height: 44px; width: calc(100% + 36px); margin: 0 -18px; border: 0; border-top: 1px solid #fff1; padding: 13px 18px; display: flex; align-items: center; justify-content: space-between; color: #ffad75; background: #ff74180a; font-size: .7rem; font-weight: 650; text-align: left; }
+.apex-site .account-example-credentials > button:hover { background: #ff74181c; }
+.apex-site .account-auth-form { display: grid; gap: 20px; }
+.apex-site .account-auth-form > label { font-size: .72rem; color: #d7dfd7; gap: 9px; }
+.apex-site .account-auth-form input:not([type=checkbox]) { background: #111a14; border-color: #475044; border-radius: 12px; min-height: 51px; font-size: .8rem; padding-inline: 14px; }
+.apex-site .account-auth-form input::placeholder { color: #758176; font-size: .73rem; }
+.apex-site .account-auth-form input:focus { border-color: var(--orange); outline: 2px solid #ff74181c; }
+.apex-site .account-auth-form input[readonly] { color: #b3bfb4; border-color: #354031; background: #131b15; }
+.apex-site .account-password-field { position: relative; display: block; }
+.apex-site .account-password-field input { padding-right: 48px!important; }
+.apex-site .account-password-field > button { position: absolute; top: 3px; right: 3px; height: 45px; width: 42px; padding: 12px; border: 0; background: none; color: #a4b0a4; }
+.apex-site .account-password-field svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.4; }
+.apex-site .account-auth-consent { display: flex; align-items: start; color: #a9b4aa!important; font-size: .67rem!important; line-height: 1.7; }
+.apex-site .account-auth-consent a { color: #dfc5af; text-underline-offset: 3px; text-decoration: underline; }
+.apex-site .account-auth-submit { width: 100%; min-height: 52px; font-size: .77rem; justify-content: space-between; margin-top: 2px; }
+.apex-site .account-auth-meta { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin: 24px 0 0; font-size: .67rem; color: #9caa9e; }
+.apex-site .account-auth-meta > a { color: #ffad75; min-height: 34px; display: inline-flex; align-items: center; }
+.apex-site .account-form-hint { color: #9faa9f; font-size: .65rem; line-height: 1.8; margin: -4px 0 0; }
+.apex-site .account-feedback { border: 1px solid #b1c3ac25; border-left: 2px solid #a4c596; border-radius: 12px; background: #a1bf8b09; padding: 14px 16px; margin: 20px 0 0; color: #ced9c9; font-size: .72rem; line-height: 1.8; }
+.apex-site .account-feedback.error { color: #ffc7b2; background: #ff74180b; border-color: #ff99632b; border-left-color: #ff9963; }
+.apex-site .account-entry-signature { display: flex; align-items: center; justify-content: center; gap: 12px; padding-top: 24px; margin-top: 28px; border-top: 1px solid #ffffff12; }
+.apex-site .account-entry-signature > span { color: #ff8c45; font-size: .61rem; letter-spacing: .22em; }
+.apex-site .account-entry-signature > p { color: #758476; font-size: .63rem; margin: 0; }
+.apex-site .account-auth-complete,.apex-site .account-auth-pending { text-align: center; padding-block: 10px; }
+.apex-site .account-auth-complete > p,.apex-site .account-auth-pending > p { font-size: .8rem; color: #a9b8ac; line-height: 1.9; }
+.apex-site .account-auth-success,.apex-site .account-auth-mail { width: 64px; height: 64px; display: grid; place-items: center; border: 1px solid #ff8c454d; border-radius: 50%; color: #ffa05f; background: #ff74180e; font-size: 26px; margin: 10px auto 26px; }
+.apex-site .account-auth-success { color: #b4d9a2; border-color: #abc79b40; background: #a7c7940a; }
+.apex-site .account-pending-address { display: inline-flex; border: 1px solid #ffffff20; border-radius: 100px; padding: 9px 16px; margin-bottom: 18px; color: #f5d2b3; font-size: .74rem; }
+.apex-site .account-credential-summary { display: grid; gap: 8px; border-radius: 16px; padding: 20px; background: #0b140fa6; border: 1px solid #fff1; margin-block: 20px 26px; font-size: .76rem; color: #d4ded1; }
+.apex-site .account-credential-summary code { font: inherit; color: #ffb47f; }
+.apex-site .account-mailbox { margin-top: 26px; border-top: 1px solid #ffffff20; padding-top: 24px; }
+.apex-site .account-mailbox-heading { display: flex; align-items: center; gap: 12px; }
+.apex-site .account-mailbox-heading .account-kicker { font-size: .5rem; margin-bottom: 5px; }
+.apex-site .account-mailbox-heading h3 { font-family: var(--font-display); font-size: 1.25rem; letter-spacing: -.04em; }
+.apex-site .account-mailbox-heading .account-demo-chip { margin-left: auto; font-size: .54rem; }
+.apex-site .account-mail-icon { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid #fff2; border-radius: 12px; color: #d2dcca; background: #fff1; }
+.apex-site .account-mailbox-note { color: #8f9f91; font-size: .64rem; margin: 16px 0; line-height: 1.8; }
+.apex-site .account-email { padding: 22px 20px; border-radius: 16px; border: 1px solid #d1e2c325; background: linear-gradient(140deg,#eef5e70e,#111a15); margin-top: 12px; }
+.apex-site .account-email-meta { display: flex; justify-content: space-between; gap: 12px; color: #a4b39e; font-size: .56rem; margin-bottom: 22px; }
+.apex-site .account-email-meta strong { font-weight: 500; color: #d6e1ce; }
+.apex-site .account-email-meta > span:last-child { color: #ffb57e; text-transform: uppercase; letter-spacing: .1em; }
+.apex-site .account-email h4 { margin: 0 0 12px; font-family: var(--font-display); font-size: 1.2rem; letter-spacing: -.03em; }
+.apex-site .account-email p { color: #aebbab; font-size: .72rem; line-height: 1.9; white-space: pre-line; }
+.apex-site .account-email .button { width: 100%; font-size: .68rem; min-height: 46px; }
+.apex-site .account-email.consumed { opacity: .7; }
+.apex-site .account-email-done { color: #b4cfaa; font-size: .7rem; }
+.apex-site .account-mini-loader,.apex-site .account-loading-ring { display: inline-block; width: 17px; height: 17px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: account-spin .7s linear infinite; }
+@keyframes account-spin { to { transform: rotate(360deg); } }
+.apex-site .account-dashboard { padding-block: 25px 100px; }
+.apex-site .account-topbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-bottom: 30px; }
+.apex-site .account-back { color: #9eafa2; font-size: .75rem; min-height: 40px; display: inline-flex; align-items: center; }
+.apex-site .account-topbar > div { display: flex; align-items: center; gap: 20px; }
+.apex-site .account-signout { display: flex; align-items: center; gap: 12px; padding: 8px 0; min-height: 40px; border: 0; background: none; color: #a9b9ac; font-size: .7rem; }
+.apex-site .account-signout:hover { color: var(--orange); }
+.apex-site .account-welcome-grid { display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: 65px; }
+.apex-site .account-welcome { padding: 24px 0 14px; }
+.apex-site .account-welcome h1 { font-size: clamp(3.1rem,5.6vw,5.2rem); letter-spacing: -.065em; margin-bottom: 12px; line-height: 1; }
+.apex-site .account-welcome h1 > span { color: var(--orange); }
+.apex-site .account-welcome h2 { font-size: clamp(1.8rem,3.2vw,2.8rem); letter-spacing: -.05em; line-height: 1.15; max-width: 500px; }
+.apex-site .account-welcome > p:not(.account-kicker):not(.account-welcome-demo) { max-width: 430px; color: #a1b0a4; font-size: .82rem; margin: 23px 0 28px; line-height: 1.85; }
+.apex-site .account-welcome .button { font-size: .77rem; }
+.apex-site .account-welcome-demo { display: flex; align-items: start; gap: 8px; color: #819685; font-size: .62rem; line-height: 1.7; max-width: 400px; margin: 20px 0 0; }
+.apex-site .account-welcome-demo span { color: #ff9e62; font-size: 16px; line-height: 1.1; }
+.apex-site .account-next-card { height: 365px; position: relative; border: 1px solid #ffffff2e; border-radius: 26px; overflow: hidden; background: #1b271e; box-shadow: 0 20px 70px #0004; }
+.apex-site .account-next-card > img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s; }
+.apex-site .account-next-card:hover > img { transform: scale(1.035); }
+.apex-site .account-next-shade { position: absolute; inset: 0; background: linear-gradient(180deg,#0d1b1540 0%,#0c17142a 30%,#0c1714eb 95%); }
+.apex-site .account-next-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; position: absolute; top: 24px; left: 26px; right: 26px; }
+.apex-site .account-next-label { letter-spacing: .16em; color: #eef2e9; font-size: .53rem; }
+.apex-site .account-sample-tag { background: #101a14bc; border: 1px solid #ffffff4a; border-radius: 100px; color: #ffbd8a; font-size: .58rem; padding: 6px 10px; }
+.apex-site .account-next-copy { position: absolute; bottom: 27px; left: 29px; right: 29px; }
+.apex-site .account-next-copy h3 { font-family: var(--font-display); font-size: 2.55rem; letter-spacing: -.05em; margin: 14px 0 10px; }
+.apex-site .account-next-copy p { color: #c4d1c2; font-size: .73rem; margin-bottom: 16px; }
+.apex-site .account-next-copy p > span { padding-inline: 7px; }
+.apex-site .account-next-link { border: 0; background: none; color: #f3c49c; font-size: .73rem; padding: 0; display: inline-flex; align-items: center; gap: 25px; min-height: 34px; }
+.apex-site .account-next-link:hover { color: var(--orange); }
+.apex-site .account-overview { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin-block: 42px 50px; }
+.apex-site .account-overview-card { min-width: 0; display: flex; align-items: center; gap: 21px; background: linear-gradient(130deg,#28322ac2,#18231ba8); border: 1px solid #ffffff1c; border-radius: 18px; padding: 25px 26px; color: inherit; text-align: left; transition: border-color .2s,background .2s; }
+.apex-site .account-overview-card.active,.apex-site .account-overview-card:hover { border-color: #ff9c5757; background: linear-gradient(130deg,#33382be3,#1b281cf0); }
+.apex-site .account-overview-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; color: #ffb57e; background: #ff74180c; border: 1px solid #ff9a5622; font-size: 23px; }
+.apex-site .account-overview-text { display: grid; gap: 4px; }
+.apex-site .account-overview-text strong { font-family: var(--font-display); font-size: 1.9rem; font-weight: 500; line-height: 1; }
+.apex-site .account-overview-text > span { color: #a3b3a5; font-size: .69rem; }
+.apex-site .account-overview-arrow { color: #94a593; margin-left: auto; }
+.apex-site .account-workspace { display: grid; grid-template-columns: 255px minmax(0,1fr); gap: 35px; align-items: start; }
+.apex-site .account-sidebar { display: grid; gap: 22px; }
+.apex-site .account-profile-card { background: linear-gradient(145deg,#27312ade,#17221be0); border: 1px solid #ffffff1c; border-radius: 22px; padding: 27px 23px 0; }
+.apex-site .account-avatar { display: grid; place-items: center; width: 58px; height: 58px; border: 1px solid #ffd7a950; border-radius: 50%; background: linear-gradient(135deg,#807249,#383e29); color: #fff0ce; font-family: var(--font-display); font-size: 1.1rem; letter-spacing: .03em; margin-bottom: 20px; }
+.apex-site .account-profile-name { font-size: .91rem; font-weight: 650; margin: 0 0 6px; }
+.apex-site .account-profile-email { font-size: .63rem; overflow-wrap: anywhere; color: #93a696; margin: 0 0 17px; }
+.apex-site .account-profile-type { display: inline-flex; color: #b6c9ac; padding: 5px 9px; border-radius: 100px; background: #9bb78d10; border: 1px solid #99b68a23; font-size: .56rem; margin-bottom: 23px; }
+.apex-site .account-profile-link { min-height: 50px; width: calc(100% + 46px); margin-inline: -23px; border: 0; border-top: 1px solid #ffffff16; border-radius: 0 0 22px 22px; color: #d5dfd0; background: #ffffff03; font-size: .67rem; text-align: left; padding: 13px 23px; display: flex; align-items: center; justify-content: space-between; }
+.apex-site .account-profile-link:hover { color: #ffae74; background: #ff741808; }
+.apex-site .account-help-card { border: 1px solid #a2bc8e20; border-radius: 22px; padding: 25px 23px; background: linear-gradient(155deg,#25412836,#111c165c); }
+.apex-site .account-help-icon { color: #ffa362; font-size: 24px; display: block; margin-bottom: 18px; }
+.apex-site .account-help-card h3 { font-family: var(--font-display); letter-spacing: -.04em; font-size: 1.45rem; margin-bottom: 16px; }
+.apex-site .account-help-card p { font-size: .7rem; color: #94a597; line-height: 1.85; margin-bottom: 20px; }
+.apex-site .account-help-card a { display: inline-flex; color: #e6b58a; gap: 22px; min-height: 32px; align-items: center; font-size: .69rem; }
+.apex-site .account-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 23px; }
+.apex-site .account-section-heading .account-kicker { margin-bottom: 11px; font-size: .53rem; }
+.apex-site .account-section-heading h2 { font-size: 2.25rem; letter-spacing: -.05em; }
+.apex-site .account-refresh { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; color: #98ac9c; border: 0; background: none; font-size: .63rem; padding: 10px 0 10px 12px; }
+.apex-site .account-refresh > span { font-size: 18px; }
+.apex-site .account-refresh .spinning { animation: account-spin .8s linear infinite; }
+.apex-site .account-record-tabs { display: flex; gap: 26px; border-bottom: 1px solid #ffffff1e; margin-bottom: 25px; }
+.apex-site .account-record-tabs button { display: inline-flex; align-items: center; gap: 10px; color: #98ab9b; font-size: .77rem; min-height: 49px; padding: 0 1px 14px; border: 0; border-bottom: 2px solid transparent; background: none; margin-bottom: -1px; }
+.apex-site .account-record-tabs button.active { color: #ffac72; border-bottom-color: var(--orange); }
+.apex-site .account-record-tabs button > span { background: #c4d1bb0d; border-radius: 6px; font-size: .57rem; padding: 3px 6px; color: #a8baa8; }
+.apex-site .account-record-tabs button.active > span { background: #ff74181a; color: #ffac72; }
+.apex-site .account-record-panel { outline-offset: 5px; border-radius: 20px; }
+.apex-site .account-record-list { display: grid; gap: 20px; }
+.apex-site .account-record-card { border: 1px solid #ffffff1e; border-radius: 20px; overflow: hidden; background: linear-gradient(135deg,#27312aa6,#16221ad9); display: grid; grid-template-columns: 195px minmax(0,1fr); }
+.apex-site .account-record-photo { min-height: 235px; width: 100%; border: 0; border-right: 1px solid #ffffff12; background: #132118; padding: 0; position: relative; overflow: hidden; }
+.apex-site .account-record-photo:after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg,#0c1b1459,#0c1b1405); pointer-events: none; }
+.apex-site .account-record-photo > img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; transition: transform .6s; }
+.apex-site .account-record-photo:hover > img { transform: scale(1.05); }
+.apex-site .account-record-photo > span { position: absolute; z-index: 1; left: 13px; top: 14px; color: #ffe2c3; border: 1px solid #ffffff38; background: #0e1b14c9; border-radius: 100px; padding: 5px 8px; font-size: .48rem; letter-spacing: .13em; }
+.apex-site .account-record-copy { padding: 23px 25px 0; min-width: 0; }
+.apex-site .account-record-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.apex-site .account-status-chip { display: inline-flex; align-items: center; gap: 6px; background: #d9be8610; border: 1px solid #d9be8630; color: #d6c28f; border-radius: 100px; padding: 6px 9px; font-size: .56rem; line-height: 1.3; }
+.apex-site .account-status-chip:before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
+.apex-site .account-status-chip[data-status=quoted] { color: #ffba83; border-color: #ff9a5538; background: #ff9a5510; }
+.apex-site .account-status-chip[data-status=confirmed] { color: #a9d3a0; border-color: #a7cd953d; background: #a7cd9512; }
+.apex-site .account-status-chip[data-status=completed] { color: #b4c8b1; border-color: #b8ccb52e; background: #a6c29b0b; }
+.apex-site .account-status-chip[data-status=cancelled] { color: #c8aaa0; border-color: #b89e9430; background: #b89e940b; }
+.apex-site .account-record-reference { font-size: .51rem; letter-spacing: .06em; color: #79917f; overflow-wrap: anywhere; }
+.apex-site .account-record-title { display: block; color: #f3f4ec; padding: 0; border: 0; background: none; text-align: left; font-family: var(--font-display); letter-spacing: -.04em; font-size: 1.6rem; line-height: 1.1; margin-bottom: 16px; }
+.apex-site .account-record-title:hover { color: #ffb683; }
+.apex-site .account-record-meta { display: flex; flex-wrap: wrap; gap: 10px 16px; color: #9cae9e; font-size: .64rem; margin-bottom: 12px; }
+.apex-site .account-record-meta > span { display: flex; align-items: center; gap: 6px; }
+.apex-site .account-record-meta svg { width: 14px; height: 14px; stroke: #8ca48f; stroke-width: 1.2; fill: none; }
+.apex-site .account-record-quote,.apex-site .account-record-description { color: #c0cbb8; font-size: .67rem; margin: 0 0 15px; line-height: 1.75; }
+.apex-site .account-record-description { color: #889c8e; }
+.apex-site .account-record-bottom { border-top: 1px solid #ffffff12; display: flex; align-items: center; justify-content: space-between; gap: 15px; min-height: 49px; padding-block: 10px; }
+.apex-site .account-record-bottom > span { color: #7e9586; font-size: .54rem; }
+.apex-site .account-record-bottom > button { background: none; border: 0; color: #e4b78f; font-size: .63rem; display: flex; align-items: center; gap: 18px; padding: 4px 0 4px 6px; min-height: 30px; white-space: nowrap; }
+.apex-site .account-empty { min-height: 365px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border-radius: 22px; border: 1px dashed #ffffff20; background: radial-gradient(at 50% 0,#a9bc870c,transparent 65%),#1320184d; padding: 45px 35px; }
+.apex-site .account-empty-art { width: 60px; height: 60px; border-radius: 50%; border: 1px solid #ffffff20; color: #bcaa82; display: grid; place-items: center; font-size: 26px; margin-bottom: 25px; }
+.apex-site .account-empty h3 { font-family: var(--font-display); font-size: 1.7rem; letter-spacing: -.04em; margin-bottom: 16px; }
+.apex-site .account-empty p { max-width: 400px; font-size: .75rem; color: #91a494; line-height: 1.9; }
+.apex-site .account-empty .button { margin-top: 12px; font-size: .7rem; }
+.apex-site .account-loading { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 365px; font-size: .8rem; color: #a7b79f; }
+.apex-site .account-loading p { margin: 0; }
+.apex-site .account-record-dialog,.apex-site .account-profile-dialog { width: min(890px,calc(100vw - 36px)); max-height: calc(100svh - 40px); border: 1px solid #ffffff30; border-radius: 26px; color: var(--paper); background: #162019; padding: 0; overflow: auto; box-shadow: 0 30px 100px #0009; }
+.apex-site .account-record-dialog::backdrop,.apex-site .account-profile-dialog::backdrop { background: #050c09cf; backdrop-filter: blur(10px); }
+.apex-site .account-detail-cover { height: 225px; position: relative; overflow: hidden; }
+.apex-site .account-detail-cover > img { width: 100%; height: 100%; object-fit: cover; }
+.apex-site .account-detail-cover-shade { position: absolute; inset: 0; background: linear-gradient(#06120c10,#102019b5); }
+.apex-site .account-detail-cover > .account-status-chip { position: absolute; bottom: 22px; left: 32px; background: #132119eb; }
+.apex-site .account-detail-example { position: absolute; top: 25px; left: 32px; background: #101d16d4; color: #ffc598; border: 1px solid #ffffff30; border-radius: 100px; padding: 7px 11px; font-size: .54rem; letter-spacing: .1em; }
+.apex-site .account-dialog-close { position: absolute; top: 16px; right: 16px; width: 40px; height: 40px; padding: 0; border: 1px solid #ffffff50; border-radius: 50%; background: #0b1710ab; color: #f0f3e8; font-size: 27px; line-height: 1; display: grid; place-items: center; z-index: 1; }
+.apex-site .account-detail-content { padding: 30px 34px 32px; }
+.apex-site .account-detail-content > .account-kicker { font-size: .57rem; margin-bottom: 10px; }
+.apex-site .account-detail-content > h2 { font-size: 2.65rem; letter-spacing: -.055em; margin-bottom: 16px; }
+.apex-site .account-detail-intro { font-size: .78rem; color: #a8baa8; line-height: 1.8; margin-bottom: 25px; }
+.apex-site .account-demo-note { display: flex; align-items: start; gap: 12px; border-radius: 13px; border: 1px solid #ffb17125; background: #ff741808; padding: 13px 16px; margin: 22px 0; }
+.apex-site .account-demo-note > span { color: #ffab68; font-size: 20px; line-height: 1.2; }
+.apex-site .account-demo-note p { color: #bdb8a0; font-size: .67rem; line-height: 1.8; margin: 0; }
+.apex-site .account-detail-facts { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 23px; margin: 27px 0; border-block: 1px solid #ffffff16; padding-block: 25px; }
+.apex-site .account-detail-facts dt,.apex-site .account-logistics dt { color: #819784; font-size: .6rem; margin-bottom: 8px; }
+.apex-site .account-detail-facts dd { font-size: .83rem; color: #d5dfcf; margin: 0; }
+.apex-site .account-detail-quote { border: 1px solid #bfd2aa24; border-radius: 16px; display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 23px; margin: 20px 0 30px; background: linear-gradient(130deg,#a5be7b0d,#17251b); }
+.apex-site .account-detail-quote .account-kicker { font-size: .53rem; margin-bottom: 10px; }
+.apex-site .account-detail-quote p:not(.account-kicker) { font-size: .81rem; color: #d9dfcc; margin: 0; line-height: 1.75; }
+.apex-site .account-detail-quote svg { flex-shrink: 0; width: 27px; height: 27px; stroke: #819c72; fill: none; stroke-width: 1.2; }
+.apex-site .account-detail-section { margin-bottom: 28px; }
+.apex-site .account-detail-section h3 { font-family: var(--font-display); letter-spacing: -.03em; font-size: 1.2rem; margin-bottom: 22px; }
+.apex-site .account-progress { display: flex; align-items: start; margin: 0; padding: 0; list-style: none; gap: 0; }
+.apex-site .account-progress > li { display: flex; flex-direction: column; align-items: center; flex: 1; position: relative; text-align: center; }
+.apex-site .account-progress > li:after { content: ''; position: absolute; top: 14px; left: calc(50% + 17px); right: calc(-50% + 17px); height: 1px; background: #ffffff1c; }
+.apex-site .account-progress > li:last-child:after { display: none; }
+.apex-site .account-progress > li > span { display: grid; place-items: center; width: 29px; height: 29px; border: 1px solid #ffffff23; border-radius: 50%; background: #17231c; color: #738a78; font-size: .53rem; }
+.apex-site .account-progress > li.complete:after { background: #ff9d555e; }
+.apex-site .account-progress > li.complete > span { color: #e8bb8d; border-color: #ffab675e; background: #ff741811; }
+.apex-site .account-progress > li.current > span { background: var(--orange); border-color: var(--orange); color: #1b220f; }
+.apex-site .account-progress p { font-size: .55rem; color: #6f8978; margin: 11px 0 0; }
+.apex-site .account-progress li.complete p { color: #d0c9ab; }
+.apex-site .account-detail-note { font-size: .66rem; line-height: 1.85; color: #819887; margin-top: 16px; }
+.apex-site .account-detail-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; border-top: 1px solid #ffffff14; padding-top: 26px; }
+.apex-site .account-included-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.apex-site .account-included-list li { display: flex; align-items: center; gap: 9px; font-size: .75rem; color: #becdb7; }
+.apex-site .account-included-list li > span { color: #ffb475; }
+.apex-site .account-logistics { margin: 0; display: grid; gap: 17px; }
+.apex-site .account-logistics dd { font-size: .74rem; color: #bcccb8; line-height: 1.75; margin: 0; }
+.apex-site .account-detail-footer { border-top: 1px solid #ffffff16; padding-top: 25px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.apex-site .account-detail-footer .button { min-height: 45px; font-size: .66rem; }
+.apex-site .account-subtle-button { padding: 8px 0; min-height: 40px; color: #91a98d; border: 0; background: none; font-size: .65rem; margin-right: auto; }
+.apex-site .account-profile-dialog { padding: 40px 35px; width: min(530px,calc(100vw - 36px)); position: relative; }
+.apex-site .account-profile-dialog > .account-avatar { width: 75px; height: 75px; font-size: 1.4rem; margin-bottom: 25px; }
+.apex-site .account-profile-dialog > h2 { font-size: 2.5rem; letter-spacing: -.055em; margin-bottom: 30px; }
+.apex-site .account-profile-dialog > dl { display: grid; gap: 21px; border-block: 1px solid #ffffff16; padding-block: 24px; margin: 0 0 20px; }
+.apex-site .account-profile-dialog dt { font-size: .59rem; color: #839986; margin-bottom: 8px; }
+.apex-site .account-profile-dialog dd { font-size: .78rem; margin: 0; color: #cbd7c3; overflow-wrap: anywhere; }
+.apex-site .account-profile-dialog > .button { margin-top: 15px; width: 100%; font-size: .7rem; }
+.apex-site .account-nav-example { font-size: .51rem; text-transform: uppercase; letter-spacing: .08em; color: #ffb37e; }
+.apex-site .account-booking-demo { color: #e0bd95; border: 1px solid #ffab6840; border-radius: 12px; background: #ff74180a; padding: 12px 14px; font-size: .68rem; line-height: 1.8; }
+@media(width<=1100px) {
+ .apex-site .account-entry { gap: 30px; }
+ .apex-site .account-entry-story-content { padding: 38px 30px; }
+ .apex-site .account-entry-story h1 { font-size: 3.4rem; }
+ .apex-site .account-entry-card { padding: 30px 25px 24px; }
+ .apex-site .account-welcome-grid { gap: 35px; }
+ .apex-site .account-workspace { grid-template-columns: 220px minmax(0,1fr); gap: 25px; }
+ .apex-site .account-record-card { grid-template-columns: 165px minmax(0,1fr); }
+ .apex-site .account-record-copy { padding-inline: 20px; }
+}
+@media(width<=900px) {
+ .apex-site .account-entry { grid-template-columns: 1fr; max-width: 700px; gap: 28px; padding-top: 25px; }
+ .apex-site .account-entry-story { position: relative; top: auto; min-height: 340px; }
+ .apex-site .account-entry-story h1 { max-width: 480px; font-size: 3rem; }
+ .apex-site .account-entry-story-content { padding: 33px; }
+ .apex-site .account-entry-story-content > p:not(.account-kicker) { max-width: 430px; }
+ .apex-site .account-entry-benefits { display: none; }
+ .apex-site .account-entry-photo-label { padding: 0 33px 28px; }
+ .apex-site .account-entry-photo-label p { font-size: 1.1rem; }
+ .apex-site .account-entry-back { margin-top: 5px; }
+ .apex-site .account-entry-card { padding: 35px; }
+ .apex-site .account-welcome-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+ .apex-site .account-welcome h1 { font-size: 3.4rem; }
+ .apex-site .account-welcome h2 { font-size: 2rem; }
+ .apex-site .account-next-card { height: 355px; }
+ .apex-site .account-next-copy { left: 23px; right: 23px; }
+ .apex-site .account-next-copy h3 { font-size: 2.2rem; }
+ .apex-site .account-workspace { grid-template-columns: 1fr; }
+ .apex-site .account-sidebar { grid-template-columns: 1fr 1fr; order: 2; margin-top: 10px; }
+ .apex-site .account-profile-card { display: grid; grid-template-columns: 58px 1fr; align-items: center; column-gap: 17px; }
+ .apex-site .account-profile-card .account-avatar { margin: 0; }
+ .apex-site .account-profile-card .account-profile-email { margin-bottom: 0; }
+ .apex-site .account-profile-type { grid-column: 2; width: fit-content; margin-top: 14px; }
+ .apex-site .account-profile-link { grid-column: 1/-1; }
+ .apex-site .account-record-card { grid-template-columns: 210px minmax(0,1fr); }
+ .apex-site .account-help-card { padding: 25px; }
+ .apex-site .account-overview { gap: 12px; margin-block: 30px 38px; }
+ .apex-site .account-overview-card { padding: 21px 18px; gap: 14px; }
+}
+@media(width<=650px) {
+ .apex-site .account-entry { padding-top: 12px; padding-bottom: 60px; gap: 20px; }
+ .apex-site .account-entry-story { border-radius: 23px; min-height: 300px; }
+ .apex-site .account-entry-story-content { padding: 29px 25px 10px; }
+ .apex-site .account-entry-story h1 { font-size: 2.6rem; max-width: 400px; margin-bottom: 18px; }
+ .apex-site .account-entry-story-content > p:not(.account-kicker) { font-size: .75rem; }
+ .apex-site .account-entry-photo-label { padding: 0 25px 25px; }
+ .apex-site .account-entry-photo-label p { display: none; }
+ .apex-site .account-entry-card { padding: 27px 23px 22px; border-radius: 23px; }
+ .apex-site .account-entry-card > h2 { font-size: 2.3rem; }
+ .apex-site .account-entry-card-top { margin-bottom: 25px; }
+ .apex-site .account-entry-card-top .account-kicker { font-size: .55rem; }
+ .apex-site .account-demo-chip { font-size: .57rem; padding: 6px 9px; }
+ .apex-site .account-auth-meta { font-size: .6rem; gap: 8px; }
+ .apex-site .account-email { padding: 19px 16px; }
+ .apex-site .account-email-meta { flex-wrap: wrap; }
+ .apex-site .account-mailbox-heading .account-demo-chip { display: none; }
+ .apex-site .account-dashboard { padding-top: 15px; padding-bottom: 65px; }
+ .apex-site .account-topbar { align-items: start; padding-bottom: 20px; gap: 10px; }
+ .apex-site .account-back { font-size: .66rem; }
+ .apex-site .account-topbar > div { flex-direction: column; align-items: flex-end; gap: 2px; }
+ .apex-site .account-signout { font-size: .6rem; min-height: 32px; }
+ .apex-site .account-welcome-grid { grid-template-columns: 1fr; gap: 22px; }
+ .apex-site .account-welcome { padding-top: 10px; }
+ .apex-site .account-welcome h1 { font-size: 3.6rem; }
+ .apex-site .account-welcome h2 { font-size: 2.3rem; max-width: 380px; }
+ .apex-site .account-welcome > p:not(.account-kicker):not(.account-welcome-demo) { margin-top: 20px; font-size: .8rem; }
+ .apex-site .account-welcome-demo { font-size: .61rem; }
+ .apex-site .account-next-card { height: 320px; border-radius: 22px; }
+ .apex-site .account-next-copy h3 { font-size: 2.6rem; }
+ .apex-site .account-overview { gap: 9px; margin-top: 25px; margin-bottom: 35px; }
+ .apex-site .account-overview-card { padding: 17px 10px; gap: 9px; border-radius: 14px; flex-direction: column; align-items: flex-start; }
+ .apex-site .account-overview-icon { width: 30px; height: 30px; font-size: 18px; border-radius: 9px; }
+ .apex-site .account-overview-text strong { font-size: 1.7rem; }
+ .apex-site .account-overview-text > span { font-size: .6rem; }
+ .apex-site .account-overview-arrow { display: none; }
+ .apex-site .account-section-heading h2 { font-size: 2rem; }
+ .apex-site .account-section-heading .account-kicker { font-size: .47rem; max-width: 220px; }
+ .apex-site .account-refresh { font-size: .55rem; padding-left: 6px; }
+ .apex-site .account-record-tabs { gap: 19px; margin-bottom: 20px; }
+ .apex-site .account-record-tabs button { font-size: .7rem; gap: 7px; }
+ .apex-site .account-record-card { grid-template-columns: 1fr; }
+ .apex-site .account-record-photo { min-height: 190px; border-right: 0; border-bottom: 1px solid #ffffff14; }
+ .apex-site .account-record-copy { padding: 23px 22px 0; }
+ .apex-site .account-record-title { font-size: 1.9rem; }
+ .apex-site .account-record-meta { font-size: .66rem; }
+ .apex-site .account-record-quote { font-size: .7rem; }
+ .apex-site .account-record-bottom { min-height: 53px; }
+ .apex-site .account-record-bottom > span { font-size: .54rem; }
+ .apex-site .account-record-bottom > button { font-size: .67rem; }
+ .apex-site .account-sidebar { grid-template-columns: 1fr; gap: 18px; }
+ .apex-site .account-profile-card { padding-top: 25px; }
+ .apex-site .account-help-card { display: grid; grid-template-columns: 25px 1fr; column-gap: 14px; align-items: start; }
+ .apex-site .account-help-card h3 { margin-top: 4px; }
+ .apex-site .account-help-card p,.apex-site .account-help-card a { grid-column: 2; }
+ .apex-site .account-empty { padding: 35px 24px; }
+ .apex-site .account-empty h3 { font-size: 1.5rem; }
+ .apex-site .account-record-dialog { border-radius: 20px; max-height: calc(100svh - 24px); width: calc(100vw - 24px); }
+ .apex-site .account-detail-cover { height: 190px; }
+ .apex-site .account-detail-cover > .account-status-chip { left: 23px; bottom: 20px; }
+ .apex-site .account-detail-example { left: 23px; top: 23px; font-size: .48rem; }
+ .apex-site .account-detail-content { padding: 25px 23px; }
+ .apex-site .account-detail-content > h2 { font-size: 2.2rem; }
+ .apex-site .account-detail-facts { gap: 20px 17px; }
+ .apex-site .account-detail-facts dd { font-size: .74rem; }
+ .apex-site .account-detail-columns { grid-template-columns: 1fr; gap: 0; }
+ .apex-site .account-detail-footer { flex-direction: column; align-items: stretch; }
+ .apex-site .account-detail-footer .button { width: 100%; }
+ .apex-site .account-subtle-button { margin-right: 0; text-align: center; }
+ .apex-site .account-progress p { font-size: .5rem; }
+ .apex-site .account-profile-dialog { padding: 33px 25px; }
+ .apex-site .account-profile-dialog > h2 { font-size: 2.1rem; }
+}
+@media(prefers-reduced-motion:reduce) { .apex-site .account-mini-loader,.apex-site .account-loading-ring,.apex-site .account-refresh .spinning { animation: none; } }
+.apex-site .account-register-hint { margin-bottom: 20px; }
+.apex-site .account-reset-example { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; min-height: 42px; background: none; border: 0; color: #c0b08b; font-size: .65rem; margin-top: 15px; }
+.apex-site .account-reset-note { color: #6c8776; font-size: .58rem; text-align: center; margin: 0; line-height: 1.8; }
+.apex-site .account-remove-local { display: flex; align-items: center; justify-content: space-between; gap: 25px; margin: 0 0 25px; border: 1px solid #ffffff16; border-radius: 13px; padding: 16px 18px; }
+.apex-site .account-remove-local > p { color: #839b86; font-size: .63rem; margin: 0; line-height: 1.8; }
+.apex-site .account-remove-local > button { background: none; border: 0; padding: 5px 0; min-height: 38px; color: #d9a68b; font-size: .63rem; white-space: nowrap; }
+@media(width<=650px){.apex-site .account-remove-local{align-items:start;flex-direction:column;gap:8px;}}

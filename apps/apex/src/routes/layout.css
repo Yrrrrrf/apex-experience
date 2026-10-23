@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+@import '../../../../sdk/ui/src/apex/reference.css';
+
+@import '../../../../sdk/ui/src/apex/apex.css';

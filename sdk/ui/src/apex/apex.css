@@ -1,0 +1,115 @@
+@import "./account/account.css";
+/* Integration styles for the reusable Svelte SDK components. Public APEX visual
+   tokens and component geometry are retained in reference.css. */
+.apex-site { min-height: 100svh; overflow: clip; }
+.apex-site main { min-height: 40svh; }
+.apex-site .apex-logo-fallback { display: grid; gap: 1px; color: var(--orange); width: 142px; text-align: center; line-height: 1; }
+.apex-logo-fallback > span { font-family: var(--font-display); font-size: 25px; font-weight: 500; letter-spacing: .2em; }
+.apex-logo-fallback small { font-size: 7px; letter-spacing: .3em; }
+.apex-site .flag { font-size: 18px; height: auto; line-height: 1; box-shadow: none; }
+.apex-site .menu-toggle { flex-direction: column; gap: 6px; }
+.apex-site .menu-toggle span { height: 1px; width: 20px; background: currentColor; }
+.apex-site .experience-links a { display: flex; align-items: center; min-height: 42px; font-size: .8rem; }
+.apex-site .experience-links a:hover { color: var(--orange); }
+.apex-site .destination-slide { cursor: pointer; }
+.apex-site .destination-stage { outline-offset: -6px; }
+.apex-site .apex-concept-note { font-size: .7rem; color: var(--muted); margin-top: 28px; }
+.apex-site .apex-upcoming { border-radius: 24px; border: 1px solid var(--line); padding: 40px; }
+.apex-site .apex-upcoming h3 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 20px; }
+.apex-site .apex-upcoming p { max-width: 720px; }
+.apex-site .regional-copy .text-link { margin-top: 10px; }
+.apex-site .regional-copy > .eyebrow { line-height: 1.8; }
+.apex-site .regional-copy > h3 { margin-top: 18px; }
+.apex-site .apex-gallery-image { color: inherit; position: absolute; inset: 0; width: 100%; height: 100%; border: 1px solid var(--line); border-radius: 20px; padding: 0; background: #162019; overflow: hidden; }
+.apex-site .apex-gallery-image img { object-fit: cover; width: 100%; height: 100%; }
+.apex-gallery-shade { position: absolute; inset: 0; background: linear-gradient(transparent 30%,#0b0d0de8); }
+.apex-gallery-status { position: absolute; top: 14px; left: 14px; border-radius: 20px; padding: 8px 11px; background: var(--orange); color: var(--ink); font-size: .55rem; font-weight: 800; }
+.apex-gallery-count { position: absolute; top: 14px; right: 14px; background: #111312d9; border: 1px solid #fff3; border-radius: 50px; padding: 9px 12px; font-size: .63rem; }
+.apex-gallery-caption { position: absolute; bottom: 20px; left: 20px; text-align: left; display: grid; gap: 8px; }
+.apex-gallery-caption small { font-size: .55rem; letter-spacing: .15em; }
+.apex-gallery-caption strong { font-family: var(--font-display); letter-spacing: -.04em; font-size: 1.4rem; }
+.apex-site .carousel-controls > button:not(.arrow) { color: #fff; background: #242827; border: 1px solid #ffffff30; border-radius: 50%; width: 38px; height: 38px; }
+.apex-site .dots button span { background: #a99a8e; border-radius: 10px; display: block; width: 6px; height: 6px; }
+.apex-site .dots button.active span { background: var(--orange); width: 19px; }
+.apex-site .apex-orange { color: var(--orange); }
+.apex-site .apex-tour-summary { max-width: 360px; flex-shrink: 0; font-size: .9rem; }
+.apex-tour-summary .tour-price { color: var(--orange); font-size: .78rem; margin-top: 24px; }
+.apex-site .tour-badges { margin-bottom: 20px; }
+.apex-site .apex-tour-nav { position: relative; display: flex; justify-content: center; flex-wrap: wrap; width: fit-content; gap: 28px; margin: -28px auto 0; padding: 8px 28px; border: 1px solid var(--line); border-radius: 100px; background: #172019; font-size: .8rem; }
+.apex-tour-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.apex-tour-nav a:hover { color: var(--orange); }
+.apex-site .apex-details-note { margin-top: 24px; }
+.apex-site .essentials > div details p { color: var(--muted); line-height: 1.75; }
+.apex-site .essentials summary { display: flex; justify-content: space-between; gap: 20px; }
+.apex-site .essentials summary span { color: var(--orange); }
+.apex-site .apex-flight-facts { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; margin: 30px 0; }
+.apex-flight-facts > div { padding: 24px; border-radius: 18px; border: 1px solid var(--line); }
+.apex-flight-facts dt { font-size: .7rem; color: var(--muted); margin-bottom: 10px; }
+.apex-flight-facts dd { margin: 0; font-size: .9rem; }
+.apex-site .accordions { display: grid; gap: 12px; }
+.apex-site .accordions details { padding: 0 24px; border-radius: 16px; border: 1px solid var(--line); }
+.apex-site .accordions summary { display: flex; justify-content: space-between; align-items: center; padding-block: 20px; cursor: pointer; list-style: none; }
+.apex-site .accordions details p { font-size: .85rem; }
+.apex-site .booking-banner > div { max-width: 760px; }
+.apex-site .booking-banner p:not(.eyebrow) { margin-top: 22px; color: var(--muted); font-size: .85rem; }
+.apex-site .tour-meeting > p:not(.eyebrow) { max-width: 900px; margin-top: 26px; font-size: .9rem; }
+.apex-site .booking-intro > p:not(.eyebrow) { color: var(--muted); margin-top: 24px; font-size: .9rem; }
+.apex-site .booking-activities { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0; padding: 0; }
+.apex-site .booking-activities li { border: 1px solid var(--line); border-radius: 100px; padding: 9px 12px; font-size: .72rem; }
+.apex-site .booking-steps { color: var(--muted); font-size: .8rem; line-height: 1.75; padding-left: 20px; }
+.apex-site .booking-steps li { margin-block: 12px; padding-left: 6px; }
+.apex-site .booking-form input[type=number] { max-width: 100%; }
+.apex-site .booking-form pre { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; font-size: .8rem; color: var(--muted); line-height: 1.8; margin: 18px 0; }
+.apex-site .apex-inquiry-preview { border: 1px solid #ffffff26; border-radius: 12px; padding: 24px; display: grid; gap: 16px; }
+.apex-inquiry-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.apex-inquiry-actions .button { font-size: .75rem; }
+.apex-site .calendar .days button.selected { background: var(--orange); border-color: var(--orange); color: var(--ink); }
+.apex-site .gallery figure > button { color: #fff; text-align: left; cursor: zoom-in; background: none; border: 0; width: 100%; height: 100%; padding: 0; display: block; }
+.apex-site .gallery figcaption { font-size: 1.2rem; font-family: var(--font-display); letter-spacing: -.03em; background: linear-gradient(transparent,#000b); padding: 54px 24px 24px; position: absolute; bottom: 0; left: 0; right: 0; pointer-events: none; }
+.apex-lightbox { z-index: 100; color: var(--paper); border: 0; background: #0b0d0df2; padding: 50px 24px 16px; width: min(1100px,94vw); max-height: 94svh; border-radius: 20px; }
+.apex-lightbox::backdrop { background: #000d; backdrop-filter: blur(12px); }
+.apex-lightbox > img { object-fit: contain; max-height: 72svh; max-width: 100%; margin: auto; }
+.apex-lightbox-close { position: absolute; top: 6px; right: 12px; font-size: 32px; color: white; background: none; border: 0; width: 44px; height: 44px; }
+.apex-lightbox-controls { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 15px; }
+.apex-lightbox-controls p { margin: 0; color: var(--muted); font-size: .85rem; }
+.apex-lightbox-controls button { border: 1px solid var(--line); background: #212824; color: white; border-radius: 50%; width: 44px; height: 44px; }
+.apex-site .apex-account-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid var(--line); margin-bottom: 22px; }
+.apex-account-tabs button { background: none; border: 0; border-bottom: 2px solid transparent; color: var(--muted); padding: 14px 12px; font-size: .8rem; }
+.apex-account-tabs button.active { color: var(--orange); border-color: var(--orange); }
+.apex-account-records article { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.apex-account-records h3 { margin: 18px 0 12px; }
+.apex-account-records p,.apex-account-records small { font-size: .8rem; color: var(--muted); }
+.apex-account-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.apex-site .auth-card .button { font-size: .78rem; }
+.apex-site .apex-privacy { max-width: 1080px; }
+.apex-privacy > h1 { font-size: clamp(3rem,6vw,5.8rem); max-width: 900px; margin-bottom: 35px; }
+.apex-privacy-index { border: 1px solid var(--line); padding: 30px; border-radius: 22px; margin: 40px 0; background: #1b211cb0; }
+.apex-privacy-index ol { columns: 2; margin: 0; padding-left: 20px; }
+.apex-privacy-index li { padding: 6px 10px; font-size: .85rem; }
+.apex-privacy-index a:hover { color: var(--orange); }
+.apex-privacy > section { border-top: 1px solid var(--line); padding-block: 36px; scroll-margin-top: 120px; }
+.apex-privacy > section h2 { font-size: 1.8rem; margin-bottom: 24px; }
+.apex-privacy > section p { color: var(--muted); font-size: .9rem; }
+.apex-site .not-found { min-height: 65svh; }
+.apex-site .not-found p:not(.eyebrow) { margin-top: 30px; }
+@media (width<=900px) { .apex-site .apex-tour-summary { max-width: 300px; } .apex-site .apex-tour-nav { gap: 18px; font-size: .72rem; } }
+@media (width<=650px) {
+ .apex-site .apex-tour-summary { max-width: none; }
+ .apex-site .apex-tour-nav { border-radius: 16px; width: 100%; margin: 16px 0 0; padding: 8px 15px; gap: 8px 16px; justify-content: flex-start; }
+ .apex-site .apex-flight-facts { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .apex-site .apex-upcoming { padding: 26px; }
+ .apex-site .apex-privacy-index ol { columns: 1; }
+ .apex-site .apex-inquiry-preview { padding: 18px; }
+ .apex-inquiry-actions { flex-direction: column; }
+ .apex-site .apex-logo-fallback { width: 112px; }
+ .apex-site .apex-logo-fallback > span { font-size: 22px; }
+ .apex-site .apex-concept-note { margin-top: 22px; }
+}
+.apex-site .apex-local-drafts { margin-top: 70px; }
+.apex-local-drafts > h2 { margin-bottom: 24px; }
+.apex-draft-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+.apex-draft-grid article { padding: 26px; border: 1px solid var(--line); border-radius: 20px; }
+.apex-draft-grid h3 { margin-block: 24px 14px; }
+.apex-draft-grid p { font-size: .85rem; }
+@media(width<=900px){.apex-draft-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(width<=650px){.apex-draft-grid{grid-template-columns:1fr;}}

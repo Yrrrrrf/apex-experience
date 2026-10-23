@@ -1,0 +1,12 @@
+{
+	"minimal": {
+		"identifier": "dev.yrrrrrf.gwa.minimal",
+		"productName": "GWA Minimal",
+		"frontendDist": "build"
+	},
+	"vision": {
+		"identifier": "dev.yrrrrrf.gwa.vision",
+		"productName": "GWA Svelte",
+		"frontendDist": "build"
+	}
+}

@@ -1,0 +1,20 @@
+{
+ "name": "@apps/apex",
+ "version": "0.0.1",
+ "description": "APEX Experience — private adventures, destinations and inquiries on GWA",
+ "license": "MIT",
+ "exports": "./src/lib/mod.ts",
+ "imports": {
+  "svelte": "npm:svelte@5.57.2",
+  "@sveltejs/kit": "npm:@sveltejs/kit@3.1.0",
+  "@sveltejs/adapter-static": "npm:@sveltejs/adapter-static",
+  "@sveltejs/vite-plugin-svelte": "npm:@sveltejs/vite-plugin-svelte"
+ },
+ "tasks": {
+  "dev": "deno run -A npm:vite dev --host 0.0.0.0 --port 4173",
+  "build": "deno run -A npm:vite build",
+  "sync": "deno run -A npm:@sveltejs/kit/svelte-kit sync",
+  "check": "deno task sync && deno run -A npm:svelte-check --tsconfig ./tsconfig.json",
+  "test": "deno test ../../sdk/core/src/apex ../../sdk/api/src/apex.test.ts"
+ }
+}
